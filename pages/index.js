@@ -1,5 +1,11 @@
 import Head from "next/head";
+
+import About from "../components/index/about";
 import Header from "../components/index/header";
+import Slider from "../components/index/slider";
+import Language from "../components/general/language";
+import Link from "next/link";
+import Best from "../components/index/best";
 
 export default function Home() {
   return (
@@ -10,6 +16,35 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <About />
+      <Slider img="/restaurant-3.jpg" size={{ width: 7952, height: 5304 }}>
+        <h2>Menu</h2>
+        <p>
+          <Language textEn={"See all menu."} textEs={"Ver todo el menu."} />{" "}
+          <Link href="/menu">
+            <a>
+              <Language textEn={"Here"} textEs={"Aquí"} />
+            </a>
+          </Link>
+        </p>
+      </Slider>
+      <Best />
+      <style jsx>{`
+        h2 {
+          font-size: 2rem;
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
+
+        p {
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
+
+        p > a {
+          font-size: 1.2rem;
+        }
+      `}</style>
     </>
   );
 }

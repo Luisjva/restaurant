@@ -100,6 +100,7 @@ export default function Nav() {
           height: 3rem;
           padding: 0 0.5rem;
           top: 0;
+          z-index: 200;
         }
 
         nav > div {

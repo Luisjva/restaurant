@@ -19,15 +19,23 @@ export default function Home() {
       <Header />
       <About />
       <Slider img="/restaurant-3.jpg">
-        <h2>Menu</h2>
-        <p>
-          <Language textEn={"See all menu."} textEs={"Ver todo el menu."} />{" "}
-          <Link href="/menu">
-            <a>
-              <Language textEn={"Here"} textEs={"Aquí"} />
-            </a>
-          </Link>
-        </p>
+        <Link href="/menu">
+          <a>
+            <h2>Menu</h2>
+          </a>
+        </Link>
+        <Link href="/menu">
+          <a>
+            <p>
+              <Language textEn={"See all menu."} textEs={"Ver todo el menu."} />{" "}
+              <Link href="/menu">
+                <a>
+                  <Language textEn={"Here"} textEs={"Aquí"} />
+                </a>
+              </Link>
+            </p>
+          </a>
+        </Link>
       </Slider>
       <Best />
       <Slider img="/restaurant-4.jpg">

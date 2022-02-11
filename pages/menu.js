@@ -126,13 +126,12 @@ export default function Menu() {
           display: flex;
           justify-content: center;
           margin: 1rem;
-          gap: 0.6rem;
+          gap: 0.7rem;
         }
 
         .filter__btn {
-          background: ${colors.gray}88;
+          background: ${colors.gray}00;
           border: none;
-          border-radius: 3px;
           transition: 0.6s;
           padding: 0.5rem;
         }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { colors } from "../../utils";
+import { colors, foods } from "../../utils";
 import Card from "../general/card";
 import Info from "../general/info";
 import Language from "../general/language";
@@ -11,6 +11,7 @@ export default function Best() {
   const [touchScreen, setTouchScreen] = useState(undefined);
   const [moveSliderLeft, setMoveSliderLeft] = useState(false);
   const [moveSliderRight, setMoveSliderRight] = useState(true);
+  const [bestFood, setBestFood] = useState([]);
 
   useEffect(() => {
     setTouchScreen(
@@ -18,6 +19,14 @@ export default function Best() {
         navigator.maxTouchPoints > 0 ||
         navigator.msMaxTouchPoints > 0
     );
+
+    let listFoods = [];
+    foods.map((food) => {
+      if (food.category.includes("combo")) listFoods.push(food);
+    });
+
+    console.log(listFoods);
+    setBestFood(listFoods);
   }, []);
 
   const move = (e) => {
@@ -114,8 +123,8 @@ export default function Best() {
               : "best__cards__container best__cards__container__pc"
           }
         >
-          {bestProducts.map((product, index) => {
-            return <Card key={index} />;
+          {bestFood.map((food, index) => {
+            return <Card food={food} key={index} />;
           })}
         </div>
       </div>

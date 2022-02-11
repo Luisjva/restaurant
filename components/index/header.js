@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
-
-import { colors } from "../../utils";
 
 export default function Header() {
   const [width, setWidth] = useState(0);
@@ -15,44 +12,23 @@ export default function Header() {
 
   return (
     <header>
-      <div>
-        <Image
-          src="/restaurant-1.jpg"
-          alt="algo"
-          width={width}
-          height={width / 1.777}
-        />
-        <div></div>
-      </div>
       <h1>Nombre</h1>
       <p>Un restaurante para recordar</p>
       <style jsx>{`
         header {
           align-items: center;
           display: flex;
+          background: linear-gradient(#0007, #0007), url(/restaurant-1.jpg);
+          background-size: cover;
+          background-position: center;
           flex-direction: column;
           height: ${(width - 20) / 1.777}px;
           justify-content: center;
           width: 100%;
           max-height: 350px;
-          padding-bottom: 3rem;
+          padding-bottom: 15px;
           position: relative;
           overflow: hidden;
-        }
-
-        header > div {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        header > div > div {
-          background: ${colors.primary}55;
-          height: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
         }
 
         h1,
@@ -61,6 +37,12 @@ export default function Header() {
           position: relative;
           z-index: 100;
           margin-block-end: 0;
+        }
+
+        @media screen and (min-width: 600px) {
+          header {
+            padding-bottom: 40px;
+          }
         }
       `}</style>
     </header>

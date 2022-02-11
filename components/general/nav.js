@@ -78,11 +78,6 @@ export default function Nav() {
                   <Language textEn="Menu" textEs="Menu" />
                 </a>
               </Link>
-              <Link href="/contact">
-                <a onClick={() => click()}>
-                  <Language textEn="Contact" textEs="Contacto" />
-                </a>
-              </Link>
             </div>
           </div>
         </div>
@@ -106,6 +101,8 @@ export default function Nav() {
         nav > div {
           display: grid;
           grid-template-columns: 1fr 2fr;
+          margin: auto;
+          max-width: 1200px;
           width: 100%;
         }
 

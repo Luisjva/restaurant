@@ -6,6 +6,7 @@ import Slider from "../components/index/slider";
 import Language from "../components/general/language";
 import Link from "next/link";
 import Best from "../components/index/best";
+import Contact from "../components/index/contact";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       </Head>
       <Header />
       <About />
-      <Slider img="/restaurant-3.jpg" size={{ width: 7952, height: 5304 }}>
+      <Slider img="/restaurant-3.jpg">
         <h2>Menu</h2>
         <p>
           <Language textEn={"See all menu."} textEs={"Ver todo el menu."} />{" "}
@@ -29,6 +30,17 @@ export default function Home() {
         </p>
       </Slider>
       <Best />
+      <Slider img="/restaurant-4.jpg">
+        <h2>
+          <Language textEn={"Contact"} textEs={"Contacto"} />
+        </h2>
+      </Slider>
+      <Contact />
+      <Slider img="/restaurant-6.jpg">
+        <h2>
+          <Language textEn={"Visit us now!!!"} textEs={"Visitanos ahora!!!"} />
+        </h2>
+      </Slider>
       <style jsx>{`
         h2 {
           font-size: 2rem;

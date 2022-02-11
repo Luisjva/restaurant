@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+
 import Info from "../general/info";
+import Language from "../general/language";
 
 export default function About() {
   const [height, setHeight] = useState(0);
@@ -23,23 +25,20 @@ export default function About() {
             <Image
               src="/restaurant-2.jpg"
               alt="algo"
-              width={(height + 200) / 1.5}
-              height={height + 200}
+              width={(height + 265) / 1.5}
+              height={height + 265}
             />
           </div>
         </div>
         <div className="about__text">
-          <h3>info</h3>
+          <h3>
+            <Language textEn="About" textEs="Sobre nosotros" />
+          </h3>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            <Language
+              textEn={`Here is a text that describes your business to capture and interest the customer in how they are, perhaps a bit of their history, you talk about how they work. Here is a text that describes your business to capture and interest the customer in how they are, perhaps a bit of their history, you talk about how they work. Here is a text that describes your business to capture and interest the customer in how they are, perhaps a bit of their history, you talk about how they work.`}
+              textEs={`Aquí va un texto que describa su negocio para captar e interesar al cliente en como son, quiza un poco de su histora, hablas de como trabajan. Aquí va un texto que describa su negocio para captar e interesar al cliente en como son, quiza un poco de su histora, hablas de como trabajan. Aquí va un texto que describa su negocio para captar e interesar al cliente en como son, quiza un poco de su histora, hablas de como trabajan.`}
+            />
           </p>
         </div>
       </div>

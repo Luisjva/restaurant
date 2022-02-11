@@ -36,7 +36,7 @@ export default function About() {
           </h3>
           <p>
             <Language
-              textEn={`Here is a text that describes your business to capture and interest the customer in how they are, perhaps a bit of their history, you talk about how they work. Here is a text that describes your business to capture and interest the customer in how they are, perhaps a bit of their history, you talk about how they work. Here is a text that describes your business to capture and interest the customer in how they are, perhaps a bit of their history, you talk about how they work.`}
+              textEn={`Here is a text that describes your business in order to capture the customer's interest, perhaps a bit of the restaurant history and how it works. Here is a text that describes your business in order to capture the customer's interest, perhaps a bit of the restaurant history and how it works. Here is a text that describes your business in order to capture the customer's interest, perhaps a bit of the restaurant history and how it works.`}
               textEs={`Aquí va un texto que describa su negocio para captar e interesar al cliente en como son, quiza un poco de su histora, hablas de como trabajan. Aquí va un texto que describa su negocio para captar e interesar al cliente en como son, quiza un poco de su histora, hablas de como trabajan. Aquí va un texto que describa su negocio para captar e interesar al cliente en como son, quiza un poco de su histora, hablas de como trabajan.`}
             />
           </p>

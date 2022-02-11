@@ -53,7 +53,7 @@ export default function Menu() {
                 : "filter__btn"
             }
           >
-            <Language textEn="Everything" textEs="Todo" />
+            <Language textEn="All" textEs="Todo" />
           </button>
           <button
             onClick={() => newFilter("food")}

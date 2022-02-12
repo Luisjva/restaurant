@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { colors } from "../../utils";
 import Language from "./language";
+import Image from "next/image";
 
 export default function Nav() {
   const router = useRouter();
@@ -20,7 +21,13 @@ export default function Nav() {
   return (
     <nav>
       <div>
-        <div>Logo</div>
+        <div className="nav__logo">
+          <Link href="/">
+            <a>
+              <Image src="/logo.jpg" alt="logo" width="48" height="48" />
+            </a>
+          </Link>
+        </div>
         <div className="nav__right">
           <div className="nav__right__language">
             <Link href="/" locale="en">
@@ -104,6 +111,12 @@ export default function Nav() {
           margin: auto;
           max-width: 1200px;
           width: 100%;
+        }
+
+        .nav__logo {
+          align-items: center;
+          display: flex;
+          justify-content: flex-start;
         }
 
         .nav__right {
